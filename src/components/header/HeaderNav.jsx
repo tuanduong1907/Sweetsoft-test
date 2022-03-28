@@ -5,6 +5,7 @@ import { GrMenu } from "react-icons/gr";
 
 const HeaderNav = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showNav, setShowNav] = useState(false);
   const menuRef = useRef(null);
   useEffect(() => {
     function handleClickOutside(e) {
@@ -17,9 +18,25 @@ const HeaderNav = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 20) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div
-      className="h-20 sm:h-[110px] flex items-center justify-center"
+      className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-lg sm:static h-20 sm:h-[110px] flex items-center justify-center sm:transition-all ${
+        showNav && "sm:fixed"
+      }`}
       ref={menuRef}
     >
       <div className="flex items-center justify-between wrapper sm:mx-4">
