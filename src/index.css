@@ -1,13 +1,179 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  body {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    @apply text-sm text-primary-text;
+  }
+
+  body::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    outline: none;
+  }
+  input {
+    line-height: normal;
+  }
+  label,
+  button {
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Mobie: width < 740px */
+  @media only screen and (max-width: 46.1875em) {
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select:focus,
+    textarea {
+      font-size: 16px;
+    }
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .wrapper {
+    max-width: 1260px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .btn {
+    padding: 22px 28px;
+    user-select: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 100rem;
+    display: inline-block;
+  }
+
+  .btn--border {
+    @apply border-2 border-solid border-primary-text;
+  }
+
+  .btn--primary {
+    @apply bg-primary;
+  }
+
+  .banner-list .swiper-slide {
+    @apply w-full h-[720px];
+  }
+
+  .flexDicoration {
+    flex-direction: row-reverse !important;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+.swiper-button-next {
+  right: 20px !important;
+  min-width: 30px;
+  z-index: 10 !important;
+}
+.swiper-button-prev {
+  left: 20px !important;
+  min-width: 30px;
+}
+
+.swiper-button-prev::after {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  @apply bg-opacity-50 rounded-full bg-primary;
+}
+.swiper-button-next::after {
+  content: " " !important;
+  display: block !important;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  z-index: -10 !important;
+  @apply bg-opacity-50 rounded-full bg-primary;
+}
+
+.swiper-button-next {
+  background-image: url(../public/right-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+.swiper-button-prev {
+  background-image: url(../public/left-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+/* Mobile & tablet: width <1024px */
+@media only screen and (max-width: 1023px) {
+  .flexDicoration {
+    flex-direction: column !important;
+  }
 }
