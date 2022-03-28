@@ -18,7 +18,10 @@ const HeaderNav = () => {
     };
   }, []);
   return (
-    <div className="h-20 sm:h-[110px] flex items-center" ref={menuRef}>
+    <div
+      className="h-20 sm:h-[110px] flex items-center justify-center"
+      ref={menuRef}
+    >
       <div className="flex items-center justify-between wrapper sm:mx-4">
         <a href="/#" className="flex items-center select-none">
           <img
