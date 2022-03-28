@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section className="bg-[#252d3a] px-3">
       <div className="wrapper">
-        <div className="py-10 lg:py-[154px] px-5 flex justify-center gap-x-32 pb-14 flex-col sm:flex-row">
+        <div className="py-10 lg:py-[154px] px-5 flex justify-center gap-x-32 pb-14 flex-col lg:flex-row">
           <div className="flex flex-col flex-1 text-center lg:text-left">
             <div className="w-[64px] h-[64px] flex gap-x-2 items-center mb-8">
               <img
@@ -41,7 +41,7 @@ const Footer = () => {
                 <span className="block text-xl font-bold uppercase mb-9">
                   Services
                 </span>
-                <ul>
+                <ul className="">
                   <li className="mb-7">
                     <a
                       href="/#"
@@ -144,7 +144,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex-1 mt-9 lg:mt-0">
+          <div className="flex-1 mt-9 sm:mt-0">
             <span className="block text-xl font-bold uppercase mb-9">
               subcribe newsletter
             </span>
