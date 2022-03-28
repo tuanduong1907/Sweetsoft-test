@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Sweetsoft-test/static/css/main.4a07a3af.css",
-    "main.js": "/Sweetsoft-test/static/js/main.ffd2373a.js",
+    "main.css": "/Sweetsoft-test/static/css/main.de7e3999.css",
+    "main.js": "/Sweetsoft-test/static/js/main.82065661.js",
     "static/js/787.05e5f493.chunk.js": "/Sweetsoft-test/static/js/787.05e5f493.chunk.js",
     "index.html": "/Sweetsoft-test/index.html",
-    "main.4a07a3af.css.map": "/Sweetsoft-test/static/css/main.4a07a3af.css.map",
-    "main.ffd2373a.js.map": "/Sweetsoft-test/static/js/main.ffd2373a.js.map",
+    "main.de7e3999.css.map": "/Sweetsoft-test/static/css/main.de7e3999.css.map",
+    "main.82065661.js.map": "/Sweetsoft-test/static/js/main.82065661.js.map",
     "787.05e5f493.chunk.js.map": "/Sweetsoft-test/static/js/787.05e5f493.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a07a3af.css",
-    "static/js/main.ffd2373a.js"
+    "static/css/main.de7e3999.css",
+    "static/js/main.82065661.js"
   ]
 }
