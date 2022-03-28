@@ -109,7 +109,7 @@ const Footer = () => {
             <span className="block text-xl font-bold uppercase mb-9">
               follow us on
             </span>
-            <ul className="flex items-center justify-center lg:justify-start gap-x-4 mt-7">
+            <ul className="flex items-center justify-center sm:justify-start gap-x-4 mt-7">
               <li>
                 <a
                   href="/#"
