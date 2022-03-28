@@ -102,7 +102,11 @@
   }
 
   .btn--primary {
-    @apply bg-primary;
+    @apply transition-all bg-primary;
+  }
+
+  .btn--primary:hover {
+    opacity: 0.7;
   }
 
   .banner-list .swiper-slide {
